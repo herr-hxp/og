@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container-fluid">
+	<h1 class="display-4">{% block title %} ..:: OG v0.1 {% endblock %}</h1>
+	<form>
+		<h2 class="text-light">OpenStack</h2>
+		<h4 class="text-light">Flavors</h4>
+    {% for flavor in flavors %}
+		<div class="row">
+      <div class="col col-lg-4">
+        <p class="text-light">{{ flavor['name'] }} </p>
+      </div>
+      <div class="col">
+	    	<p class="text-light">{{ flavor['hourlyprice'] }}</p> 
+      </div>
+      <div class="col">
+	    	<p class="text-light">{{ flavor['monthlyprice'] }}</p>
+      </div>
+      <div class="col">
+		    <input type="text" class="form-control" name="amount-of-f" placeholder="#">
+      </div>
+      <div class="col">
+        <p class="text-light">PENG</p>
+      </div>
+    </div>
+		{% endfor %}
+
+		<h4 class="text-light">Storage</h4>
+		{% for stor in storage %}
+    <div class="row">
+      <div class="col col-lg-4">
+    		<p class="text-light">{{ stor['name'] }} </p>
+      </div>
+      <div class="col">
+		    <p class="text-light">{{ stor['hourlyprice'] }}</p>
+      </div>
+      <div class="col">
+		    <p class="text-light">{{ stor['monthlyprice'] }}</p>
+      </div>
+      <div class="col">
+    		<input type="text" name="amount-of-s" class="form-control" placeholder="#">
+      </div>
+      <div class="col">
+        <p class="text-light">PENG</p>
+      </div>
+		</div>
+		{% endfor %}
+
+		<br />
+		<h4 class="text-light">Network</h4>
+		{% for nw in network %}
+    <div class="row">
+      <div class="col col-lg-4">
+    		<p class="text-light">{{ nw['name'] }} </p>
+      </div>
+      <div class="col">
+    		<p class="text-light">{{ nw['hourlyprice'] }}</p>
+      </div>
+      <div class="col">
+        <p class="text-light">{{ nw['monthlyprice'] }}</p>
+      </div>
+      <div class="col">
+    		<input type="text" name="amount-of-n" class="form-control" placeholder="#">
+      </div>
+      <div class="col">
+        <p class="text-light">PENG</p>
+      </div>
+		</div>
+		{% endfor %}
+
+		<h4 class="text-light">Licenses</h4>
+		{% for license in licenses %}
+    <div class="row">
+      <div class="col col-lg-4">
+    		<p class="text-light">{{ license['name'] }} </p>
+      </div>
+      <div class="col">
+		    <p class="text-light">{{ license['hourlyprice'] }}</p>
+      </div>
+      <div class="col">
+		    <p class="text-light">{{ license['monthlyprice'] }}</p>
+      </div>
+      <div class="col">
+    		<input type="text" name="amount-of-l" class="form-control" placeholder="#">
+      </div>
+      <div class="col">
+        <p class="text-light">PENG</p>
+      </div>
+		</div>
+		{% endfor %}
+	
+	</form>
+  </div>
+{% endblock %}

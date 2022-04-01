@@ -1,0 +1,14 @@
+h1 {
+    #border: 2px #eee solid;
+    #background: #0f262e80;
+    #background: #1a2c33;
+    background: #1b2e36;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.elx-blue {
+  background: #1a2c33;
+  #background: #1b2e36;
+}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>{% block title %} Welcome to OffGen v0.1 {% endblock %}</h1>
+	{% for product in products %}
+		<span class="product name">{{ product['name'] }}</span>
+		<span class="product hourlyprice">{{ product['hourlyprice'] }}</span>
+		<span class="product monthlyprice">{{ product['monthlyprice'] }}</span>
+		<form action="" method="get">
+			<input type="text" name="amount">
+		<br />
+	{% endfor %}
+			<input type="submit" value="Do the mafs">
+		</form>
+{% endblock %}
